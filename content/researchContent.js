@@ -21,6 +21,7 @@ export const researchEntries = [
     summary: 'A point-in-time observation protocol for separating promising historical behavior from evidence that persists after selection.',
     status: 'COLLECTING',
     updated: '17 July 2026',
+    published: false,
   },
   {
     slug: 'microstructure',
@@ -30,6 +31,7 @@ export const researchEntries = [
     summary: 'Research into whether execution-level market data adds stable information after chronological and regime-aware validation.',
     status: 'RESEARCH NOTE',
     updated: '13 July 2026',
+    published: true,
   },
   {
     slug: 'methodology',
@@ -39,8 +41,11 @@ export const researchEntries = [
     summary: 'The public principles used to separate market regimes, preserve chronology and keep unfinished research out of production.',
     status: 'ACTIVE',
     updated: '15 July 2026',
+    published: true,
   },
 ];
+
+export const publicResearchEntries = researchEntries.filter((entry) => entry.published);
 
 export const researchArticles = {
   'forward-validation': {
