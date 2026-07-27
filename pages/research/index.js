@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import ResearchLayout from '../../components/ResearchLayout';
-import { researchEntries, researchSnapshot } from '../../content/researchContent';
+import { publicResearchEntries, researchSnapshot } from '../../content/researchContent';
 import styles from '../../styles/Research.module.css';
 
 export default function ResearchIndex() {
@@ -47,7 +47,7 @@ export default function ResearchIndex() {
           <div className={styles.sectionLabel}><span>03</span><span>RESEARCH INDEX</span></div>
           <h2 id="library-title">Selected public notes.</h2>
           <div className={styles.libraryList}>
-            {researchEntries.map((entry) => (
+            {publicResearchEntries.map((entry) => (
               <Link href={`/research/${entry.slug}`} key={entry.slug}>
                 <span>{entry.index}</span>
                 <div>
@@ -73,4 +73,3 @@ export default function ResearchIndex() {
     </ResearchLayout>
   );
 }
-

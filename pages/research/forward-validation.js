@@ -5,3 +5,8 @@ export default function ForwardValidation() {
   return <ResearchArticle article={researchArticles['forward-validation']} />;
 }
 
+export function getStaticProps() {
+  return {
+    notFound: true,
+  };
+}
